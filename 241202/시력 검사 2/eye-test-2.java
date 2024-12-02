@@ -14,7 +14,7 @@ public class Main {
         else if (a > 0.5)
             System.out.println("Middle");
         else 
-            System.out.println("Low")
+            System.out.println("Low");
         
     }
 }
