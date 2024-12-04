@@ -16,6 +16,6 @@ public class Main {
             System.out.println("Paul");
 
         else 
-            System.out.println("Vacancy")   
+            System.out.println("Vacancy");
     }
 }
