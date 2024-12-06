@@ -14,6 +14,6 @@ public class Main {
         if (b > a && b < c)
             System.out.println("1");
         else
-            System.out.println("1");
+            System.out.println("0");
     }
 }
