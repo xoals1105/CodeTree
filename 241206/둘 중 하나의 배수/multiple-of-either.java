@@ -9,7 +9,7 @@ public class Main {
 
         a = sc.nextInt();
 
-        if (a % 3 == 0 || a % 5 ==)
+        if (a % 3 == 0 || a % 5 == 0)
             System.out.println("1");
         else    
             System.out.println("o");
