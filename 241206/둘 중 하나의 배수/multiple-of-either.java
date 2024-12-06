@@ -12,6 +12,6 @@ public class Main {
         if (a % 3 == 0 || a % 5 == 0)
             System.out.println("1");
         else    
-            System.out.println("o");
+            System.out.println("0");
     }
 }
