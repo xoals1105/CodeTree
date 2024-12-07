@@ -16,7 +16,14 @@ public class Main {
         c1 = sc.next().charAt(0);
         c2 = sc.nextInt();
 
-        if (a1 == 'Y' && b1 == 'Y') {
+        if (a1 == 'Y' && b1 == 'Y' && c1 == 'Y') {
+            if (a2 >= 37 && b2 >= 37 && c2 >= 37)
+                System.out.println("E");
+            else
+                System.out.println("N");
+        }
+        
+        else if (a1 == 'Y' && b1 == 'Y') {
             if (a2 >= 37 && b2 >= 37)
                 System.out.println("E");
             else
