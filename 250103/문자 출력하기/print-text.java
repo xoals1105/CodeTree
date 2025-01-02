@@ -14,3 +14,4 @@ public class Main {
         for(int i = 1; i <= 8; i++)
             System.out.print(c);
     }
+}
