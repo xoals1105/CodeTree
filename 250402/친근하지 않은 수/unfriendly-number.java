@@ -10,7 +10,7 @@ public class Main {
         n = sc.nextInt();
 
         for(int i = 1; i <= n; i++) {
-            if(i % 2 == 1 || i % 3 == 1 || i % 5 == 1)
+            if(i % 2 == 0 || i % 3 == 0 || i % 5 == 0)
                 continue;
             sum++;
         }
