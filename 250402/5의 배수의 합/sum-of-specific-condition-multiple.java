@@ -20,8 +20,7 @@ public class Main {
             if(i % 5 ==0)
                 sum += i;
         }
-
         System.out.println(sum);
         
     }
-}
+}'',·
