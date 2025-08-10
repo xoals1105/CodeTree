@@ -20,9 +20,9 @@ public class Main
             }
         }
 
-        if (finder == true) System.out.println("Yes");
+        if (finder == true) System.out.println("YES");
 
-        else System.out.println("No");
+        else System.out.println("NO");
       
 
     }
