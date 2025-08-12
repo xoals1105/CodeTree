@@ -2,29 +2,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        Scanner scanner = new Scanner(System.in);
+        // 변수 선언 및 입력
+        int n = sc.nextInt();
 
-        int n = scanner.nextInt();
-
-        for (int i = 1; i <= n; i++)
-        {
-            if (i % 2 != 0)
-            {
-                for (int j = 0; j < n; j++)
-                {
-                    System.out.print(j + 1 + " ");
-                }
+        // 좌우 지그재그로 출력합니다.
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                if(i % 2 == 0)
+                    System.out.print(((i * n) + j + 1) + " ");
+                else
+                    System.out.print(((i * n) + n - j) + " ");
             }
-
-            else 
-            {
-                for (int j = n; j > 0; j--)
-                {
-                    System.out.print(i * j + " ");
-                }
-            }
-
             System.out.println();
         }
     }
