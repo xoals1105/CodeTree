@@ -9,8 +9,8 @@ public class Main {
 
         for (int i = 1; i <= n; i++)
         {
-            for (int j = 1; j <= n; j++)
-                System.out.print(n * i - 1);
+            for (int j = n; j > 0; j--)
+                System.out.print(i * j + " ");
             System.out.println();
         }
     }
