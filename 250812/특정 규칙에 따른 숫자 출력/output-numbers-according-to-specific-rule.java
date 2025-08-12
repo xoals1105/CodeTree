@@ -12,11 +12,13 @@ public class Main {
             for (int j = 0; j < n - i; j++)
                  System.out.print("  ");
                 
-            if (cnt == 10)
-                cnt = 1;
-                    
+          
+
             for (int j = i; j > 0; j--)
             {
+                if (cnt == 10)
+                    cnt = 1;
+
                 System.out.print(cnt + " ");
                 cnt++;
             }
