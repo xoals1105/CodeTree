@@ -13,7 +13,6 @@ public class Main {
         int[] two_questionArr = new int[q];
         int[] three_questionArr = new int[q];
 
-        int index = -1;
 
         for(int i = 0; i < n; i++)
         {
@@ -22,6 +21,8 @@ public class Main {
 
         for(int i = 0; i < q; i++)
         {
+            int index = -1;
+
             one_questionArr[i] = scanner.nextInt();
             two_questionArr[i] = scanner.nextInt();
             
