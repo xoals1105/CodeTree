@@ -19,8 +19,7 @@ public class Main {
             else even_sum += arr[i];
         }
 
-        if (odd_sum > even_sum) System.out.print(odd_sum - even_sum);
-        else  System.out.print(odd_sum - even_sum);
-
+        if (odd_sum >= even_sum) System.out.print(odd_sum - even_sum);
+        else System.out.print(even_sum - odd_sum);
     }
 }
