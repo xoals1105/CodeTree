@@ -23,7 +23,7 @@ public class Main {
 
         boolean found = false;
 
-        for(int i = 0; i < a - b; i++)
+        for(int i = 0; i < a; i++)
         {
             int cnt = 0;
 
