@@ -12,7 +12,6 @@ public class Main {
         {
             arr[i] = scanner.nextInt();
             countArr[arr[i]]++;
-
         }
 
 
