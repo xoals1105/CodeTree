@@ -7,16 +7,17 @@ public class Main {
 
         int person = scanner.nextInt();
         int pass_count = 0;
+        int[] arr = new int[4];
         for (int i = 0; i < person; i++)
         {
-            int[] arr = new int[4];
+          
             int sum = 0;
             int cnt = 0;
 
             for(int j = 0; j < 4; j++)
             {
-                arr[i] = scanner.nextInt();
-                sum += arr[i];
+                arr[j] = scanner.nextInt();
+                sum += arr[j];
                 cnt++;
             }
             
