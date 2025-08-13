@@ -11,12 +11,12 @@ public class Main {
         {
             arr[i] = scanner.nextInt();
 
-            if(arr[i] == 3)
+            if(arr[i] % 3 == 0)
             {
                 num = i;
                 break;
             }
         }
-        System.out.print(arr[num -1]);
+        System.out.print(arr[num - 1]);
     }
 }
