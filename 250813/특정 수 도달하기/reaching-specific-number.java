@@ -16,16 +16,13 @@ public class Main {
 
         for(int current_num = 0; current_num < 10; current_num++)
         {
-            if(arr[current_num] <= 250)
-            {
-                sum += arr[current_num];
-                cnt++;
-            }
-
-            else 
-                break;
+            if(arr[current_num] >= 250) break;
+            sum += arr[current_num];
+            cnt++;
+                
         }   
 
-        System.out.print(sum + " " + (double) sum / cnt);
+        double avg = (double) sum / cnt;
+        System.out.printf("%d %.1f", sum, avg);
     }
 }
