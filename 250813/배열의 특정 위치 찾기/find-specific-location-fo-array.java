@@ -27,7 +27,7 @@ public class Main {
             cnt++;
         }
 
-        double avg = second_case_sum / cnt;
+        double avg = (double) second_case_sum / cnt;
 
         System.out.printf("%d %.1f", first_case_sum, avg);
 
