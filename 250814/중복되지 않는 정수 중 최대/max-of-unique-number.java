@@ -15,23 +15,23 @@ public class Main {
         }
 
         int maxVal = arr[0];
+        boolean found = false;
 
-        for(int i = 0; i < n; i++)
+        for(int i = 1; i < n; i++)
         {
-            if(arr[i] > maxVal)
+            if(arr[i] >= maxVal)
             {
-                maxVal = arr[i];
+                if(arr[i] != maxVal)
+                {
+                    maxVal = arr[i];
+                    found = true;
+                    continue;
+                }
+      
+                found = false;
             }
         }
 
-        for(int i = 0; i < n; i++)
-        {
-            if(arr[i] == maxVal)
-            {
-                cnt++;
-            }
-        }
-
-        System.out.print(cnt >= 2 ? "-1" : maxVal);
+        System.out.print(found ? maxVal : "-1");
     }
 }
