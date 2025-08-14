@@ -20,10 +20,12 @@ public class Main {
 
         while(end >= 0)
         {
+            maxVal = INT_MIN;
         for(int i = 0; i < location; i++)
         {
             if(arr[i] > maxVal)
             {
+                maxVal = arr[i];
                 testNum = arr[i];
             }
         }
@@ -47,11 +49,11 @@ public class Main {
             
         }
          if(cnt == 1)
-            {
-                System.out.print(location + 1 + " "); 
-                end = location - 1;
-                break;
-            }   
+        {
+            System.out.print(location + 1 + " "); 
+            end = location - 1;
+            break;
+        }   
         }
     }
 }
