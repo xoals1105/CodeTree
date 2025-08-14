@@ -24,8 +24,8 @@ public class Main {
                 sum += arr[i][j];
                 sum2 += arr[i][j]; 
             }
-            int avg = (sum / 4);
-            System.out.print(avg + ".0 ");
+            double avg = (double) sum / 4;
+            System.out.print(avg + " ");
         }
         System.out.println();
 
@@ -36,12 +36,12 @@ public class Main {
             {
                 sum1 += arr[j][i];
             }
-            int avg = (sum1 / 2);
-            System.out.print(avg + ".0 ");
+            double avg = (double) sum1 / 2;
+            System.out.print(avg + " ");
         }
         System.out.println();
 
-        int avg = (sum2 / 8);
-        System.out.print(avg + ".0 ");
+        double avg = (double) sum2 / 8;
+        System.out.print(avg + " ");
     }
 }
