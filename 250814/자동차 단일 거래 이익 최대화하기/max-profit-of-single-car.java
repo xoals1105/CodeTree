@@ -24,7 +24,7 @@ public class Main {
             }
         }
 
-        for(int i = cnt; i < n; i++)
+        for(int i = cnt + 1; i < n; i++)
         {
             if(arr[i] > maxVal)
             {
