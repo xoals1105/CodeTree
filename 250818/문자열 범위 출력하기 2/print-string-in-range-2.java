@@ -8,7 +8,7 @@ public class Main {
         String string = scanner.next();
         int num = scanner.nextInt();
         int cnt = 0;
-        for(int i = string.length() - 1; i >= string.length() - num; i--)
+        for(int i = string.length() - 1; i >= 0; i--)
         {
             if(cnt >= num)
                 break;
