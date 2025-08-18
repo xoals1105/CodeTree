@@ -19,11 +19,12 @@ public class Main {
                 cnt = 0;
             }
 
-            else if(last == len - 1)
+            if(last == len - 1)
             {
                 a_string += string.charAt(len - 1);
                 a_string += cnt + 1;
             }
+
             last++;
             cnt++;
         }
