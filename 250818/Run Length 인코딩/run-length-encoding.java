@@ -19,6 +19,7 @@ public class Main {
                 cnt = 0;
             }
 
+            
             if(last == len - 1)
             {
                 a_string += string.charAt(len - 1);
@@ -28,6 +29,12 @@ public class Main {
             last++;
             cnt++;
         }
+
+        if(len == 1)
+        {
+            a_string += string.charAt(len - 1);
+            a_string += cnt;
+        }  
 
         System.out.println(a_string.length());
         System.out.println(a_string);
