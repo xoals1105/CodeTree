@@ -7,8 +7,13 @@ public class Main {
 
         String string = scanner.next();
         int num = scanner.nextInt();
-
+        int cnt = 0;
         for(int i = string.length() - 1; i >= string.length() - num; i--)
+        {
+            if(cnt >= num)
+                break;
             System.out.print(string.charAt(i));
+            cnt++;
+        }
     }
 }
