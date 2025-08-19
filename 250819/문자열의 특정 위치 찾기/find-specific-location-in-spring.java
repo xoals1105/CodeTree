@@ -11,7 +11,7 @@ public class Main {
         int found = -1;
         boolean bool_found = false;
 
-        for(int i = 0; i < length - 1; i++)
+        for(int i = 0; i < length; i++)
         {
             if(string.charAt(i) == find_char) 
             {
