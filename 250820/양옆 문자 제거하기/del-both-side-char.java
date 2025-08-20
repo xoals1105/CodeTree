@@ -7,7 +7,7 @@ public class Main {
 
         String string = scanner.next();
 
-        string = string.substring(0, 2) + string.substring(3, string.length() - 2) + string.substring(string.length() - 1);
+        string = string.substring(0, 1) + string.substring(2, string.length() - 2) + string.substring(string.length() - 1);
 
         System.out.println(string);
     }
