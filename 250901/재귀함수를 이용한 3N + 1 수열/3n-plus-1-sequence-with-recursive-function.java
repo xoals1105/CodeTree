@@ -5,7 +5,7 @@ public class Main {
 
     public static int Calculation(int n)
     {
-        if(n == 1) return 1;
+        if(n == 1) return 0;
 
         if(n % 2 == 0)
             Calculation(n / 2);
