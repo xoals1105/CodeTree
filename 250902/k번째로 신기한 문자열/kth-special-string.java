@@ -6,14 +6,20 @@ public class Main {
     public static String FindString(String[] words, int k, String t)
     {
         int cnt = 0;
+        String[] tStartingString = new String[words.length];
 
         for(int i = 0; i < words.length; i++)
         {
-            if(words[i].substring(0, t.length()).equals(t)) cnt++;
-            if(cnt == k) return words[i];    
+            if(words[i].substring(0, t.length()).equals(t))
+            {
+                tStartingString[cnt] = words[i];
+                cnt++;
+            }   
         }
 
-        return "NotFound";
+        Arrays.sort(tStartingString, 0, cnt);
+
+        return tStartingString[k - 1];
     }
 
     public static void main(String[] args) {
@@ -26,7 +32,6 @@ public class Main {
             words[i] = sc.next();
         }
         
-        Arrays.sort(words);
         System.out.println(FindString(words, k, t));
     }
 }
