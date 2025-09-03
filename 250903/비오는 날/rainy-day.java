@@ -31,7 +31,7 @@ public class Main {
         int firstIdx = 0;
         for(int i = 1; i < n; i++)
         {
-            if(weatherReport[firstIdx].day.compareTo(weatherReport[i].day) < 0) firstIdx = i;
+            if(weatherReport[i].day.compareTo(weatherReport[firstIdx].day) > 0) firstIdx = i;
         }
 
         System.out.println(weatherReport[firstIdx].date + " " + weatherReport[firstIdx].day + " " + weatherReport[firstIdx].weather);
