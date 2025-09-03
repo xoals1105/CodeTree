@@ -30,11 +30,15 @@ public class Main {
             weatherReport[i] = new WeatherReport(date, day, weather);
         }
 
-        int firstIdx = 0;
-        for(int i = 1; i < n; i++)
+        int firstIdx = -1; // 아직 못 찾았다는 의미
+        for(int i = 0; i < n; i++) {
+        if(weatherReport[i].weather.equals("Rain")) 
         {
-            if(weatherReport[i].day.compareTo(weatherReport[firstIdx].day) > 0 && weatherReport[i].weather.equals("Rain")) firstIdx = i;
+        if(firstIdx == -1 || weatherReport[i].date.compareTo(weatherReport[firstIdx].date) < 0) {
+            firstIdx = i;
         }
+    }
+}
 
         System.out.println(weatherReport[firstIdx].date + " " + weatherReport[firstIdx].day + " " + weatherReport[firstIdx].weather);
     }
