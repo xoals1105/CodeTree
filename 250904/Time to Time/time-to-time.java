@@ -8,11 +8,9 @@ public class Main {
         int c = sc.nextInt();
         int d = sc.nextInt();
     
-        int hours = c - a;
-        int mins = d - c;
+        int firstMins = a * 60 + b;
+        int secondMins = c * 60 + d;
 
-        hours = hours * 60;
-
-        System.out.println(hours + mins - 1);
+        System.out.println(secondMins - firstMins);
    }
 }
