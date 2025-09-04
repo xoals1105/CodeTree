@@ -14,7 +14,7 @@ public class Main {
             x1 += 100;
             x2 += 100;
 
-            for(int j = x1; j <= x2; j++)
+            for(int j = x1; j < x2; j++)
                 section[j] += 1; 
         }
 
