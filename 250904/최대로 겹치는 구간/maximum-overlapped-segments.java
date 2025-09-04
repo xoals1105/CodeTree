@@ -18,7 +18,7 @@ public class Main {
                 section[j] += 1; 
         }
 
-        int maxOverlap = 0;
+        int maxOverlap = 1;
         for(int i = 0; i < section.length; i++) {
             if(section[i] > maxOverlap)
                 maxOverlap = section[i];
