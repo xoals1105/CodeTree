@@ -12,7 +12,7 @@ public class Main {
         num *= 17;
         
         int cnt = 0;
-        int[] digits = new int[8];
+        int[] digits = new int[100];
         while(true)
         {
             if(num < 2)
