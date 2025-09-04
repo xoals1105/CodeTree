@@ -57,7 +57,7 @@ public class Main
                 if(day < 0)
                 {
                     month--;
-                    day = dayOfMonth[month];
+                    day = dayOfMonth[month] - 1;
                 }
             }
 
