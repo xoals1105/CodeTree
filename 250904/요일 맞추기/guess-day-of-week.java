@@ -35,7 +35,7 @@ public class Main
                 if(day > dayOfMonth[month])
                 {
                     month++;
-                    day = 0;
+                    day = 1;
                 }
             }
 
