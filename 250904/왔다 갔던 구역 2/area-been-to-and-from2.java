@@ -21,13 +21,15 @@ public class Main {
             {
                 switch(dir[i])
                 {
-                    case 'L':  
-                        digits[initialDistance] += 1;
-                        initialDistance++;
+                    case 'L':
+                         
+                        digits[initialDistance - 1] += 1;
+                        initialDistance--; 
                         break;
                     case 'R':
+                        
                         digits[initialDistance] += 1;  
-                        initialDistance--;
+                        initialDistance++;
                         break;
                 }
             }
