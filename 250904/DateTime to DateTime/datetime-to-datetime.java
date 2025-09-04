@@ -4,7 +4,7 @@ public class Main {
     public static int DateTime(int A, int B, int C)
     {
 
-        if(A < 11) return -1;
+        if(A < 11 || (A == 11 && B < 11) || (A == 11 && B == 11 && C < 11)) return -1;
         int initialMin = (11 * 1440) + (11 * 60) + 11;
         int day = A * 1440;
         int time = B * 60;
