@@ -3,11 +3,14 @@ public class Main {
 
     public static int DateTime(int A, int B, int C)
     {
-        int day = (A - 11) * 1440;
-        int time = (B - 11) * 60;
-        int min = C - 11;
 
-        return day + time + min;
+        if(A < 11) return -1;
+        int initialMin = (11 * 1440) + (11 * 60) + 11;
+        int day = A * 1440;
+        int time = B * 60;
+        int min = C;
+
+        return (day + time + min) - initialMin;
     }
 
     public static void main(String[] args) {
