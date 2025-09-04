@@ -9,8 +9,8 @@ public class Main {
             int start = sc.nextInt();
             int end = sc.nextInt();
 
-            for(int j = start; j < end; j++)
-                section[i] += 1;
+            for(int j = start; j <= end; j++)
+                section[j] += 1;
         }
 
         int max = 0;
@@ -19,6 +19,6 @@ public class Main {
             if(section[i] > max) max = section[i];
         }
 
-        System.out.println(max - 1);    
-        }
+        System.out.println(max);    
+    }
 }
