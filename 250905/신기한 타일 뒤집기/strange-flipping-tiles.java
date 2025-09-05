@@ -24,8 +24,8 @@ public class Main {
             {
                 while(x-- > 0)
                 {
-                    tile[location - 1] = 1;
-                    location--;
+                    tile[location] = 1;
+                    if(x > 0) location--;
                 }
             }
 
@@ -34,7 +34,7 @@ public class Main {
                 while(x-- > 0)
                 {
                     tile[location] = 2;
-                    location++;
+                    if(x > 0) location++;
                 }
             }
         }
