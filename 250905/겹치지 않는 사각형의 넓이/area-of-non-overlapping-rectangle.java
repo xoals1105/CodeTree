@@ -28,6 +28,19 @@ public class Main {
         int mx2 = sc.nextInt();
         int my2 = sc.nextInt();
 
+        ax1 += max;
+        ay1 += max;
+        ax2 += max;
+        ay2 += max;
+        bx1 += max;
+        by1 += max;
+        bx2 += max;
+        by2 += max;
+        mx1 += max;
+        my1 += max;
+        mx2 += max;
+        my2 += max;
+
         Coloring(ax1, ay1, ax2, ay2);
         Coloring(bx1, by1, bx2, by2);
         Coloring(mx1, my1, mx2, my2);
