@@ -8,7 +8,7 @@ public class Main {
         for (int i = 0; i < n; i++)
             arr[i] = sc.nextInt();
         
-        int a = 1, b = 1, length = 0;
+        int a = 1, b = 1, length = 1;
 
         for(int i = 1; i < arr.length; i++)
         {
