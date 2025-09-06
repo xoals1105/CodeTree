@@ -36,17 +36,27 @@ public class Main {
             {
                 for(int y = y1[i]; y < y2[i]; y++)
                 {
-                    if(checked[x][y] != 1) checked[x][y] = i + 1;
-                    else checked[x][y] = 1;
+                    checked[x][y] = i + 1;
                 }
             }
         }
 
-        int cnt = 0;
-        for(int i = 0; i < MAX_RANGE; i++)
-            for(int j = 0; j < MAX_RANGE; j++)
-                if(checked[i][j] == 1) cnt++;
+        // 남아있는 A 영역의 bounding box 찾기
+        int minX = MAX_RANGE, maxX = -1, minY = MAX_RANGE, maxY = -1;
+        for (int x = 0; x < MAX_RANGE; x++) {
+            for (int y = 0; y < MAX_RANGE; y++) {
+                if (checked[x][y] == 1) {
+                    minX = Math.min(minX, x);
+                    maxX = Math.max(maxX, x);
+                    minY = Math.min(minY, y);
+                    maxY = Math.max(maxY, y);
+                }
+            }
+        }
 
-        return cnt;
+        // 잔해물이 없는 경우
+        if (maxX == -1) return 0;
+
+        return (maxX - minX + 1) * (maxY - minY + 1);
     }
 }
