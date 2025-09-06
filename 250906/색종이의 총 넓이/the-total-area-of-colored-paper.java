@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Main {
 
-    public static final int maxRange = 300;
+    public static final int maxRange = 200;
     public static final int paperLength = 8;
     public static final int offSet = 100; 
 
