@@ -9,13 +9,13 @@ public class Main {
         for (int i = 0; i < n; i++)
             arr[i] = sc.nextInt();
     
-        int cnt = 0, length = 1;
-        for(int i = 0; i < n; i++)
+        int cnt = 0, length = 0;
+        for(int i = 1; i < n; i++)
         {
-            if(arr[0] > t) cnt++;
-
             if(arr[i] > t && arr[i - 1] > t) cnt++;
-            else cnt = 1;
+            else if(arr[i - 1] > t) cnt = 1;
+            else if(arr[i] > t) cnt = 1;
+            else cnt = 0;
 
             length = Math.max(length, cnt);
         }
