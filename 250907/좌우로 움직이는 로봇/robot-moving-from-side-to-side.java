@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static final int MAX = 1000005;
+    public static final int MAX = 10000000;
 
     public static int[] robotA = new int[MAX];
     public static int[] robotB = new int[MAX];
