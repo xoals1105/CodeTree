@@ -38,27 +38,34 @@ public class Main {
         }
 
         int maxTime = Math.max(timeA, timeB);
-        int hallOfFame = 0, leader = 0;
+        int hallOfFame = 1, leader = 0;
         for(int i = 1; i < maxTime; i++)
         {
             // System.out.println(runA[i] + " " + runB[i]);
             if(runA[i] > runB[i]) 
             {
                 if(leader == 2)
-                    hallOfFame++;              
+                {
+                    hallOfFame++;   
+                }           
               
                 leader = 1; 
             }
             else if(runA[i] < runB[i]) 
             {        
                 if(leader == 1)
-                    hallOfFame++;               
+                {
+                    hallOfFame++;    
+                }           
                
                 leader = 2; 
             }
 
-            else if(runA[i] == runB[i]) 
-                hallOfFame++; 
+            else if(runA[i] == runB[i] && runA[i - 1] != runB[i - 1]) 
+            {
+                if(i != 0)
+                    hallOfFame++; 
+            }
         }
 
         System.out.println(hallOfFame);
