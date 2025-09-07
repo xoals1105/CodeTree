@@ -60,12 +60,16 @@ public class Main {
         }
 
         int cnt = 0;
-        for(int i = 1; i < MAX; i++)
+        int l = Math.max(locationA, locationB);
+        int A = 1;
+        int B = 1;
+        for(int i = 1; i < l; i++)
         {
-            if((robotA[i] == robotB[i]) && (robotA[i - 1] != robotB[i - 1]))
-            {
+            if((robotA[A] == robotB[B]) && (robotA[A - 1] != robotB[B - 1]))  
                 cnt++;
-            } 
+             
+            if(A != locationA - 1) A++;
+            if(B != locationB - 1) B++;
         }
         
         System.out.println(cnt);
