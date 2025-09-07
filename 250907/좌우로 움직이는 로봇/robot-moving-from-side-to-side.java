@@ -63,13 +63,19 @@ public class Main {
         int l = Math.max(locationA, locationB);
         int A = 1;
         int B = 1;
+        boolean boolA = false;
+        boolean boolB = false;
+
         for(int i = 1; i < l; i++)
         {
-            if((robotA[A] == robotB[B]) && (robotA[A - 1] != robotB[B - 1]))  
+            if((robotA[A] == robotB[B]) && ((robotA[A - 1] != robotB[B - 1]) || boolA || boolB))       
                 cnt++;
-             
+    
             if(A != locationA - 1) A++;
-            if(B != locationB - 1) B++;
+            else boolA = true;
+            if(B != locationB - 1) B++; 
+            else boolB = true;
+           
         }
         
         System.out.println(cnt);
