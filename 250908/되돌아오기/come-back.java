@@ -10,7 +10,8 @@ public class Main {
         int cnt = 0;
         int x = 0;
         int y = 0;
-        for(int i = 0; i < n; i++){
+        boolean find = true;
+        for(int i = 0; i < n && find; i++){
             char dir = sc.next().charAt(0);
             int dist = sc.nextInt();
 
@@ -38,12 +39,14 @@ public class Main {
 
                 cnt++;
                 if(x == 0 && y == 0) 
+                {
+                    find = false;
                     break;
-            }
-             if(x == 0 && y == 0) 
-                    break;
+                }
+                
+            }       
         }
 
-        System.out.println(cnt);
+        System.out.println(find ? "-1" : cnt);
     }
 }
