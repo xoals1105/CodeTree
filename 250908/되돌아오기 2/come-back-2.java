@@ -11,6 +11,7 @@ public class Main {
         int x = 0;
         int y = 0;
         int cnt = 0;
+        boolean find = false;
         for(int i = 0; i < commands.length(); i++)
         {
             switch(commands.charAt(i))
@@ -29,9 +30,12 @@ public class Main {
             cnt++;
 
             if(x == 0 && y == 0)
+            {   
+                find = true;
                 break;
+            }
         }
 
-        System.out.println(cnt);
+        System.out.println(find ? cnt : "-1");
     }
 }
