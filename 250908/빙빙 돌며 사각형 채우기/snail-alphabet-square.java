@@ -26,7 +26,8 @@ public class Main {
             x += dx[direction];
             y += dy[direction];
 
-            arr[x][y] = (char)('A' + i);
+            
+            arr[x][y] = (char)('A' + (i % 26));
         }
 
         for(int i = 0; i < n; i++)
