@@ -79,7 +79,7 @@ public class Main {
 
     private static boolean IsRange(int x, int y)
     {
-        return (x >= 0 && x <= N && y >= 0 && y <= N);
+        return (x >= 0 && x < N && y >= 0 && y < N);
     }
 
     
