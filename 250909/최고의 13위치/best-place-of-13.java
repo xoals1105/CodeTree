@@ -11,11 +11,9 @@ public class Main {
         int answer = 0;
         for(int i = 0; i < n; i++)
         {
-            int sum = 0;
             for(int j = 0; j < n - 2; j++)
-                sum = grid[i][j] + grid[i][j + 1] + grid[i][j + 2];
+                answer = Math.max(answer, grid[i][j] + grid[i][j + 1] + grid[i][j + 2]);
 
-            answer = Math.max(sum, answer);
         }
 
         System.out.println(answer);
