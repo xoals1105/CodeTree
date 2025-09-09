@@ -15,8 +15,9 @@ public class Main {
         {
             int roomDistance = 0;
             int roomNum = i;
+            int cnt = n;
             int sumDistace = 0;
-            while(n-- > 0)
+            while(cnt-- > 0)
             {
                 if(roomNum == n)
                     roomNum = 0;
