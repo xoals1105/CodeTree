@@ -22,9 +22,10 @@ public class Main {
                 {
                     int sum = 0;
                     if(NoCarry(arr[i], arr[j], arr[k]))
+                    {
                         sum = arr[i] + arr[j] + arr[k];
-
-                    answer = Math.max(answer, sum);
+                        answer = Math.max(answer, sum);
+                    }
                 }
             }
         }
@@ -37,7 +38,7 @@ public class Main {
         while(a > 0 || b > 0 || c > 0)
         {
             int digitSum = (a % 10) + (b % 10) + (c % 10);
-            if(digitSum > 10) return false;
+            if(digitSum >= 10) return false;
             a /= 10;
             b /= 10;
             c /= 10;
