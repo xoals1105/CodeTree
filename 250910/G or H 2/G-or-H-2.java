@@ -3,7 +3,7 @@ public class Main {
 
     public static final int MAX_N = 100;
 
-    public static char[] arr = new char[MAX_N];
+    public static char[] arr = new char[MAX_N + 1];
 
     public static void main(String[] args) 
     {   
@@ -18,9 +18,9 @@ public class Main {
         }
 
         int answer = 0;
-        for(int i = 0; i < MAX_N; i++)
+        for(int i = 0; i <= MAX_N; i++)
         {          
-            for(int j = i + 1; j < MAX_N; j++)
+            for(int j = i + 1; j <= MAX_N; j++)
             {
                 if(arr[i] == 0 || arr[j] == 0)
                     continue;
