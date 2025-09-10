@@ -1,8 +1,6 @@
 import java.util.Scanner;
 public class Main {
 
-    public static final int INT_MIN = Integer.MIN_VALUE;
-
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
@@ -13,7 +11,7 @@ public class Main {
         }
     
 
-        int answer = INT_MIN;
+        int answer = -1;
         for(int i = 0; i < n; i++)
         {
             for(int j = i + 1; j < n; j++)
