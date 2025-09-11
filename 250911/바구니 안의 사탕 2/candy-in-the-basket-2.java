@@ -9,7 +9,7 @@ public class Main
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int k = sc.nextInt();
-        int[] arr = new int[100];
+        int[] arr = new int[101];
         for (int i = 0; i < n; i++) {
             int candies = sc.nextInt();
             int positions = sc.nextInt();
@@ -18,10 +18,10 @@ public class Main
         }
 
         int answer = INT_MIN;
-        for(int i = 0; i <= 99; i++)
+        for(int i = 0; i <= 100; i++)
         {   
             int sumCandies = 0;
-            if(0 <= (i - k) && 99 >= (i + k))
+            if(0 <= (i - k) && 100 >= (i + k))
                 for(int j = i - k; j <= i + k; j++)
                     sumCandies += arr[j];
             
