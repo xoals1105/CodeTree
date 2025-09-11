@@ -21,9 +21,9 @@ public class Main
         for(int i = 0; i <= 100; i++)
         {   
             int sumCandies = 0;
-            if(0 <= (i - k) && 100 >= (i + k))
                 for(int j = i - k; j <= i + k; j++)
-                    sumCandies += arr[j];
+                    if(j >= 0 && j <= MAX_NUM)
+                        sumCandies += arr[j];
             
             
             answer = Math.max(answer, sumCandies);
