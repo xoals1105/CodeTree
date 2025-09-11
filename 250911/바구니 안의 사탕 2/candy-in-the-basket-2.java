@@ -22,7 +22,7 @@ public class Main
         {   
             int sumCandies = 0;
                 for(int j = i - k; j <= i + k; j++)
-                    if(j >= 0 && j <= MAX_NUM)
+                    if(j >= 0 && j <= 100)
                         sumCandies += arr[j];
             
             
