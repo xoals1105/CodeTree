@@ -22,7 +22,8 @@ public class Main {
                     {
                         if(i == k || j == k || i == q || j == q)
                             continue;
-                        answer = Math.min(answer, GetDiff(sum, i, j, k, q));
+                        // System.out.println(answer);
+                        answer = Math.min(answer, GetDiff(sum, arr[i], arr[j], arr[k], arr[q]));
                     }    
         
         if(answer == INT_MAX)
@@ -37,7 +38,7 @@ public class Main {
         int teamB = k + q;
         int teamC = sum - teamA - teamB;
 
-        if(teamA == teamB && teamB == teamC)
+        if(teamA == teamB || teamB == teamC || teamA == teamC)
             return INT_MAX;    
         int diff = Math.abs(teamA - teamB);
         diff = Math.max(diff, Math.abs(teamB - teamC));
