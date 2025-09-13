@@ -16,16 +16,16 @@ public class Main {
         int answer = INT_MIN;
         for(int i = 0; i < n; i++)
         {
-            int giftableStudent = 0;
+            int giftableStudent = 1;
             int student = p[i] / 2;
             for(int j = 0; j < n; j++)
             {
                 if(i == j)
                     continue;
+                    
+                student += p[j];
                 if(student > b)
                     break;
-
-                student += p[j];
                 giftableStudent++;
             }
 
