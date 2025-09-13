@@ -17,12 +17,14 @@ public class Main {
         for(int i = 0; i < n; i++)
         {
             int giftableStudent = 1;
-            int student = p[i] / 2;
+            int student = 0;
             for(int j = 0; j < n; j++)
             {
                 if(i == j)
+                { 
+                    student += p[i] / 2;
                     continue;
-                    
+                }
                 student += p[j];
                 if(student > b)
                     break;
