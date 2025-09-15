@@ -11,13 +11,13 @@ public class Main {
         }
 
         int answer = -1;
-        for(int i = 0; i < n - k; i++)
+        for(int i = 0; i < n; i++)
         {
             boolean find = false;
             for(int j = 1; j <= k; j++)
             {
-                // if(i == j) 
-                //     continue;
+                if(i + j >= n) 
+                    break;
 
                 // for(int q = 1; q <= k; q++)
                 // {
