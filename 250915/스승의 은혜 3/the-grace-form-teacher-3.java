@@ -18,7 +18,7 @@ public class Main {
         int answer = -1;
         for(int i = 0; i < n; i++)
         {
-            int gift = 0;
+            int gift = 1;
             int personCnt = 0;
             for(int j = 0; j < n; j++)
             {
