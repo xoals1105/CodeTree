@@ -27,6 +27,9 @@ public class Main {
             for(int j = 0; j < n - 1; j++)
             {
                 boolean find = false;
+                if(iceberg[0] == 0)
+                    cnt = 0;
+
                 if(iceberg[j] == 0 && iceberg[j + 1] == 1)
                     cnt++;
             }
