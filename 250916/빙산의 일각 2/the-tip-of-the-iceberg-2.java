@@ -23,14 +23,13 @@ public class Main {
                     iceberg[j] = 0;
             }
 
-            int cnt = 1;
-            for(int j = 0; j < n - 1; j++)
+            int cnt = 0;
+            if(h[0] > i)
+                    cnt++;
+            boolean find = false;
+            for(int j = 1; j < n; j++)
             {
-                boolean find = false;
-                if(iceberg[0] == 0)
-                    cnt = 0;
-
-                if(iceberg[j] == 0 && iceberg[j + 1] == 1)
+                if(h[j] > i && h[j - 1] <= i)
                     cnt++;
             }
 
