@@ -5,28 +5,30 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         String str = sc.next();
-        int num = str.length();
-        char[] arr = new char[num];
-        for(int i = 0; i < str.length(); i++)
-            arr[i] = str.charAt(i);
 
-        int cnt = 0;
-        for(int i = 1; i <= num; i++)
-        {
-            String c = str.substring(0, i);
-            for(int j = i; j <= num; j++)
-            {
-                if(i == j)
-                    continue;
+        for (int len = 1; len <= n; len++) {
+            boolean hasDuplicate = false;
 
-                String cc = str.substring(j - i, j);
+            // 길이 len짜리 부분 문자열 시작 위치 i
+            for (int i = 0; i + len <= n; i++) {
+                String a = str.substring(i, i + len);
 
-                if(c.equals(cc)) 
-                {
-                    cnt++;
+                // 그 다음 위치 j부터 비교
+                for (int j = i + 1; j + len <= n; j++) {
+                    String b = str.substring(j, j + len);
+
+                    if (a.equals(b)) {
+                        hasDuplicate = true;
+                        break;
+                    }
                 }
+                if (hasDuplicate) break;
+            }
+
+            if (!hasDuplicate) {
+                System.out.println(len);
+                return;
             }
         }
-        System.out.println(cnt + 1);
     }
 }
