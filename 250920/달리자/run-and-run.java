@@ -22,18 +22,18 @@ public class Main {
             {
                
                 int distanceCnt = 0;         
-                for(int k = 0; k < b[j]; k++)
+                for(int k = 0; k < a[j]; k++)
                 {
-                    if(b[j] == 0 || needNum == 0)
+                    if(a[j] == 0 || needNum == 0)
                         break;
                     needNum--;
-                    b[j]--;
+                    a[j]--;
                     distanceCnt++;
                 }
 
                 dis += (i - j) * distanceCnt;
             }
         }
-        System.out.println(dis - 1);
+        System.out.println(dis);
     }
 }
