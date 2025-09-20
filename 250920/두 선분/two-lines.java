@@ -15,9 +15,9 @@ public class Main {
 
     private static boolean MeetSegment(int x1, int x2, int x3, int x4)
     {
-        if(x3 <= x1 && x4 >= x2)
+        if(x3 <= x1 || x4 >= x2)
             return true;
-        if(x1 <= x3 && x4 <= x2)
+        if(x1 <= x3 || x4 <= x2)
             return true;
         if(x3 <= x2 || x1 <= x4)
             return true;
