@@ -17,8 +17,7 @@ public class Main {
     {
         if(x3 <= x1 || x4 >= x2)
             return true;
-        if(x1 <= x3 || x4 <= x2)
-            return true;
+     
         if(x3 <= x2 || x1 <= x4)
             return true;
 
