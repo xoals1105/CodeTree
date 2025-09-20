@@ -21,16 +21,18 @@ public class Main {
             for(int j = i - 1; j >= 0; j--)
             {
                
-                int distanceCnt = 0;         
-                for(int k = 0; k < a[j]; k++)
+                int distanceCnt = 0;  
+                int asd = a[j];
+                for(int k = 0; k < asd; k++)
                 {
                     if(a[j] == 0 || needNum == 0)
+                    {
                         break;
+                    }
                     needNum--;
                     a[j]--;
                     distanceCnt++;
                 }
-
                 dis += (i - j) * distanceCnt;
             }
         }
