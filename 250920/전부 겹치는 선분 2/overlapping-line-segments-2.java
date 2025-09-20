@@ -22,10 +22,10 @@ public class Main {
 
     private static boolean Find(int[] x1, int[] x2)
     {
-        int max_x1 = 0;
-        int min_x2 = INT_MAX;
         for(int i = 0; i < x1.length; i++)
         {
+            int max_x1 = 0;
+            int min_x2 = INT_MAX;
             for(int j = 0; j < x1.length; j++)
             {
                 if(i == j)
@@ -37,10 +37,10 @@ public class Main {
                 min_x2 = Math.min(min_x2, xr);
             }
 
-            if(min_x2 > max_x1)
-                return false;
+            if(min_x2 >= max_x1)
+                return true;
         }
 
-        return true;
+        return false;
     }
 }
