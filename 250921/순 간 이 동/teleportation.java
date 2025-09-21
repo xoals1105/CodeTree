@@ -10,7 +10,7 @@ public class Main {
         int x = sc.nextInt();
         int y = sc.nextInt();
     
-        int answer = INT_MAX;
+        int answer = Math.abs(A - B);
 
         int walkAX = Math.abs(A - x);
         int walkAY = Math.abs(A - y);
@@ -21,7 +21,7 @@ public class Main {
         int disFirst = walkAX + walkYB;
         int disSecond = walkAY + walkXB;
 
-        answer = Math.min(disFirst, disSecond);
+        answer = Math.min(answer, Math.min(disFirst, disSecond));
 
         System.out.println(answer);
     }
