@@ -15,8 +15,19 @@ public class Main {
         while(true)
         {
             if(personArr[0] + 1 == personArr[1] && personArr[1] + 1 == personArr[2])
+            {
                 break;
-            
+            }
+            if(personArr[0] + 1 == personArr[1])
+            {
+               int temp = personArr[1] + 1;
+                personArr[0] = personArr[1];
+                personArr[1] = temp;
+
+                cnt++;
+                continue;
+            }
+
             int temp = personArr[1] - 1;
             personArr[2] = personArr[1];
             personArr[1] = temp;
