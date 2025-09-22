@@ -25,9 +25,18 @@ public class Main {
                 }
             }
 
-            answer = Math.max(distance, answer);
+            if(distance == 1)
+            {
+                answer = distance;
+                break;
+            }
+            else
+                answer = Math.max(distance, answer);
         }
 
-        System.out.println(answer / 2);
+        if(answer == 1)
+            System.out.println(answer);
+        else
+            System.out.println(answer / 2);
     }
 }
