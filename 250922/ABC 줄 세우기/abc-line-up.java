@@ -19,11 +19,16 @@ public class Main {
             {
                 if(alphabet == arr[j])
                 {
-                    char temp = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = temp;
+                    int numJ = j;
+                    while(arr[i] != alphabet)
+                    {
+                        char temp = arr[numJ];
+                        arr[numJ] = arr[numJ - 1];
+                        arr[numJ - 1] = temp;
 
-                    cnt += Math.abs(j - i);
+                        numJ--;
+                        cnt++;
+                    }
                 }
             }
         }
