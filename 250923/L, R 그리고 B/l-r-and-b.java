@@ -13,6 +13,8 @@ public class Main {
         int numB_j= 0;
         int numL_i= 0;
         int numL_j = 0;
+        int numR_i = 0;
+        int numR_j = 0;
         for(int i = 0; i < 10; i++)
             for (int j = 0; j < 10; j++) 
             {
@@ -27,8 +29,14 @@ public class Main {
                     numL_i = i;
                     numL_j = j;
                 }
+
+                if(board[i][j] == 'R')
+                {
+                    numR_i = i;
+                    numR_j = j;
+                }
             }
-        if(numB_i == numL_i || numL_j == numB_j)
+        if((numB_i == numL_i && numR_i == numB_i && numR_i == numL_i) || (numL_j == numB_j && numR_j == numB_j && numR_j == numL_j))
         {
             int num = Math.abs(numL_i - numB_i) + Math.abs(numL_j - numB_j) + 1;
             System.out.println(num);
