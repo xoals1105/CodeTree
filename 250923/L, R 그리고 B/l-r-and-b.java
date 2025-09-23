@@ -28,8 +28,15 @@ public class Main {
                     numL_j = j;
                 }
             }
-
-        int num = Math.abs(numL_i - numB_i) + Math.abs(numL_j - numB_j) - 1;
-        System.out.println(num);
+        if(numB_i == numL_i || numL_j == numB_j)
+        {
+            int num = Math.abs(numL_i - numB_i) + Math.abs(numL_j - numB_j) + 1;
+            System.out.println(num);
+        }
+        else
+        {
+            int num = Math.abs(numL_i - numB_i) + Math.abs(numL_j - numB_j) - 1;
+            System.out.println(num);
+        }
     }
 }
