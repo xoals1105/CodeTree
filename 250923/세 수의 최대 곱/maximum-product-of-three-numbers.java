@@ -1,9 +1,6 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
-
-    public static final int INT_MIN = Integer.MIN_VALUE;
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -11,21 +8,13 @@ public class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
+        Arrays.sort(arr);
 
-        int answer = INT_MIN;
-        for(int i = 0; i < n; i++)
-            for(int j = i + 1; j < n; j++)
-                for(int k = j + 1; k < n; k++)
-                {
-                    int num = calculation(arr[i], arr[j], arr[k]);
-                    answer = Math.max(num, answer);
-                }
-                
-        System.out.println(answer);   
-    }
+        // 후보 1: 가장 큰 3개
+        int case1 = arr[n-1] * arr[n-2] * arr[n-3];
+        // 후보 2: 가장 작은 2개 * 가장 큰 1개
+        int case2 = arr[0] * arr[1] * arr[n-1];
 
-    private static int calculation(int a, int b, int c)
-    {
-        return a * b * c;
+        System.out.println(Math.max(case1, case2));
     }
 }
